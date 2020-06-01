@@ -11,7 +11,7 @@ object task extends IOApp {
   [
   {
     "name":"Chat-Bot",
-    "stargazers_count":0
+    "stargazers_count":9
   },
   {
     "name":"Robots",
@@ -37,11 +37,19 @@ object task extends IOApp {
     [
     {
       "name": "S11",
-      "stargazers_count":111
+      "stargazers_count":5
     },
     {
       "name": "S12",
       "stargazers_count":49
+    },
+    {
+      "name": "S13",
+      "stargazers_count":99
+    },
+    {
+      "name": "S14",
+      "stargazers_count":98
     }
     ]
     """
@@ -49,7 +57,7 @@ object task extends IOApp {
     [
     {
       "name": "S21",
-      "stargazers_count":77
+      "stargazers_count":19
     },
     {
       "name": "S22",
@@ -73,7 +81,7 @@ object task extends IOApp {
     val clientMock = new Client[IO] {
       override def get(url: Uri) = IO(Right("No use"))
 
-      val regEx = "https://api.github/users/([0-9a-zA-Z]+?)/([a-z]+?)".r
+      val regEx = "https://api.github.com/users/([0-9a-zA-Z]+?)/([a-z]+?)".r
 
       override def get(url: String) = url match {
         case regEx(y, x) if y == "S1" && x == "repos" => IO(Right(reposS1))
