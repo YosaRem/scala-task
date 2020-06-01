@@ -5,7 +5,6 @@ import sttp.client._
 import sttp.model.Uri
 
 import scala.io.StdIn
-import scala.util.matching.Regex
 
 object task extends IOApp {
   val repos = """
@@ -19,7 +18,7 @@ object task extends IOApp {
     "stargazers_count":10
   },
   {
-    "name":"scala-task"
+    "name":"scala-task",
     "stargazers_count":50
   }
   ]
@@ -37,8 +36,8 @@ object task extends IOApp {
   val reposS1 = """
     [
     {
-      "name": "S11"
-      "stargazers_count":5
+      "name": "S11",
+      "stargazers_count":111
     },
     {
       "name": "S12",
@@ -49,8 +48,8 @@ object task extends IOApp {
   val reposS2 = """
     [
     {
-      "name": "S21"
-      "stargazers_count":19
+      "name": "S21",
+      "stargazers_count":77
     },
     {
       "name": "S22",
